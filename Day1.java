@@ -5,18 +5,16 @@ class Day1
 
 public static void main(String[] args)
 {
-	System.out.println("Länge: ");
+	System.out.println("Bitte Zahlen eingeben: ");
 	Scanner scan = new Scanner(System.in);
-	int length = scan.nextInt();
-	System.out.println("Geben sie "+ length + "ganze Zahlen zwischen 1 und 9 ein:");
-	int[] ArrayA = new int[100]; 
-for(int n = 0;n < length;n++) //array einlesen
-{
-	System.out.print("Array element" + n + "eingeben: ");
-	
 
-	ArrayA[n] = scan.nextInt();
-	System.out.println();
+	int[] ArrayA = new int[999];	
+	String ArrayB = scan.nextLine();
+	int length = ArrayB.length();
+
+for(int i = 0; i < length;i++)
+{
+	ArrayA[i] = Integer.parseInt(String.valueOf(ArrayB.charAt(i))); //string zum int-Array  machen
 }
 for(int n = 0; n < length;n++)	//array ausgeben
 {
